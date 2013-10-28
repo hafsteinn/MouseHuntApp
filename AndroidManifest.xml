@@ -26,6 +26,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.RushHourApp.MainActivity" />
         </activity>
+        <activity android:name=".BoardActivity" android:label="BoardActivity"/>
     </application>
 
 </manifest>
