@@ -5,6 +5,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,18 +25,19 @@ public class DrawView extends View {
         int  color;
     }
 
-    private int m_cellWidth = 0;
-    private int m_cellHeight = 0;
-    private char[][] m_board = new char[6][6];
-    Paint mPaint = new Paint();
+    private int cellWidth = 0;
+    private int cellHeight = 0;
+    Paint paint = new Paint();
+	Paint carPaint = new Paint();
     ArrayList<MyShape> mShapes = new ArrayList<MyShape>();
     MyShape mMovingShape = null;
+	ShapeDrawable shape = new ShapeDrawable(new OvalShape());
     Rect rect = new Rect();
 
     public DrawView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mPaint.setColor( Color.WHITE );
-        mPaint.setStyle( Paint.Style.STROKE );
+        paint.setColor( Color.BLACK );
+        paint.setStyle( Paint.Style.STROKE );
 
         mShapes.add(new MyShape(new Rect(0, 0, 100, 100), Color.RED));
         mShapes.add( new MyShape( new Rect( 200, 300, 300, 350), Color.BLUE ) );
@@ -49,17 +52,27 @@ public class DrawView extends View {
 
     @Override
     protected void onSizeChanged(int xNew, int yNew, int xOld, int yOld) {
-        m_cellWidth = xNew / 3;
-        m_cellHeight = yNew / 3;
+        cellWidth = xNew / 6;
+        cellHeight = yNew / 6;
     }
 
     protected void onDraw( Canvas canvas ) {
 
-        for ( MyShape shape : mShapes ) {
-            mPaint.setColor( shape.color );
-            canvas.drawRect( shape.rect, mPaint );
-        }
+	    for ( int r=5; r>=0; --r ) {
+		    for ( int c=0; c<6; ++c ) {
+			    rect.set( c * cellWidth, r * cellHeight,
+					    c * cellWidth + cellWidth, r * cellHeight + cellHeight );
+			    canvas.drawRect( rect, paint );
+			    rect.inset( (int)(rect.width() * 0.5), (int)(rect.height() * 0.1) );
+			    shape.setBounds( rect );
 
+		    }
+	    }
+
+	    for ( MyShape shape : mShapes ) {
+		    carPaint.setColor( shape.color );
+		    canvas.drawRect( shape.rect, carPaint );
+	    }
     }
 
     public boolean onTouchEvent( MotionEvent event ) {

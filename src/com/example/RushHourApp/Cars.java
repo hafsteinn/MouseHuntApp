@@ -14,6 +14,7 @@ public class Cars
 	private int x;
 	private int y;
 	private int length;
+	private int color;
 
 	public Cars()
 	{
@@ -86,5 +87,15 @@ public class Cars
 	public void setY(int y)
 	{
 		this.y = y;
+	}
+
+	public int getColor()
+	{
+		return color;
+	}
+
+	public void setColor(int color)
+	{
+		this.color = color;
 	}
 }
