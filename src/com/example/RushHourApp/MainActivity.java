@@ -25,6 +25,11 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void startBoardActivity(View view) {
+        Intent intent = new Intent(this, BoardActivity.class);
+        startActivity(intent);
+    }
+
 
      /*
     public void buttonPressed( View view )

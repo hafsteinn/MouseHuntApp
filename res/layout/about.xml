@@ -18,7 +18,6 @@
                 android:layout_weight="1"
                 android:padding="6dip"
                 android:background="@drawable/about_background"
-
                 >
 
             <TextView
