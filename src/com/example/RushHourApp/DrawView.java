@@ -1,6 +1,7 @@
 package com.example.RushHourApp;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -11,6 +12,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class DrawView extends View {
@@ -27,10 +29,10 @@ public class DrawView extends View {
 
     private int cellWidth = 0;
     private int cellHeight = 0;
+	private RushHour rushHour;
     Paint paint = new Paint();
 	Paint carPaint = new Paint();
-    ArrayList<MyShape> mShapes = new ArrayList<MyShape>();
-    MyShape mMovingShape = null;
+    Cars movingCar = null;
 	ShapeDrawable shape = new ShapeDrawable(new OvalShape());
     Rect rect = new Rect();
 
@@ -39,8 +41,28 @@ public class DrawView extends View {
         paint.setColor( Color.BLACK );
         paint.setStyle( Paint.Style.STROKE );
 
-        mShapes.add(new MyShape(new Rect(0, 0, 100, 100), Color.RED));
-        mShapes.add( new MyShape( new Rect( 200, 300, 300, 350), Color.BLUE ) );
+	    String setting = "";
+	    try
+	    {
+		    setting = ReadXML.read(context.getAssets().open("challenge_classic40.xml"));
+	    }
+	    catch(IOException iox)
+	    {
+		    System.out.println("Error opening xml-file");
+	    }
+
+	    System.out.println(setting);
+
+	    ArrayList<Cars> cars = new ArrayList<Cars>();
+
+	    /*Cars escapeCar = new Cars(new Rect(120, 2*120, 3*120, 3*120),false, "", 2 , Color.RED);
+	    cars.add(new Cars(new Rect(0, 120, 120, 4*120), true, "", 3, Color.GREEN));
+	    cars.add(new Cars(new Rect(0, 0, 2*120, 120), false, "", 2, Color.BLUE));
+		cars.add(new Cars(new Rect(3*120, 120, 4*120, 4*120), true, "", 3, Color.CYAN));  */
+
+	    rushHour = new RushHour();
+
+	    rushHour.setState(setting);
     }
 
     @Override
@@ -63,15 +85,24 @@ public class DrawView extends View {
 			    rect.set( c * cellWidth, r * cellHeight,
 					    c * cellWidth + cellWidth, r * cellHeight + cellHeight );
 			    canvas.drawRect( rect, paint );
-			    rect.inset( (int)(rect.width() * 0.5), (int)(rect.height() * 0.1) );
+			    rect.inset( (int)(rect.width() * 0.1), (int)(rect.height() * 0.1) );
 			    shape.setBounds( rect );
 
 		    }
 	    }
 
-	    for ( MyShape shape : mShapes ) {
-		    carPaint.setColor( shape.color );
-		    canvas.drawRect( shape.rect, carPaint );
+	    for ( Cars c : rushHour.getCars() ) {
+		    carPaint.setColor( c.getColor() );
+		    if(c.getRect() != null)
+		        canvas.drawRect( c.getRect(), carPaint );
+	    }
+
+	    // draw the escape car
+	    carPaint.setColor(rushHour.getEscapeCar().getColor());
+	    if(rushHour.getEscapeCar() != null)
+	    {
+		    if(rushHour.getEscapeCar().getRect() != null)
+			    canvas.drawRect(rushHour.getEscapeCar().getRect(), carPaint);
 	    }
     }
 
@@ -83,18 +114,18 @@ public class DrawView extends View {
 
         switch ( event.getAction() ) {
             case MotionEvent.ACTION_DOWN:
-                mMovingShape = findShape( x, y );
+                movingCar = findShape( x, y );
                 break;
             case MotionEvent.ACTION_UP:
-                if ( mMovingShape != null ) {
-                    mMovingShape = null;
+                if ( movingCar != null ) {
+                    movingCar = null;
                     // emit an custom event ....
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-                if ( mMovingShape != null ) {
-                    x = Math.min( x, getWidth() - mMovingShape.rect.width() );
-                    mMovingShape.rect.offsetTo( x, y );
+                if ( movingCar != null ) {
+                    x = Math.min( x, getWidth() - movingCar.getRect().width() );
+                    movingCar.getRect().offsetTo(x, y);
                     invalidate();
                 }
                 break;
@@ -102,12 +133,15 @@ public class DrawView extends View {
         return true;
     }
 
-    private MyShape findShape( int x, int y ) {
-        for ( MyShape shape : mShapes ) {
-            if ( shape.rect.contains( x, y ) ) {
-                return shape;
+    private Cars findShape( int x, int y ) {
+        for ( Cars c : rushHour.getCars() ) {
+            if ( c.getRect().contains(x, y) ) {
+                return c;
             }
         }
+	    if(rushHour.getEscapeCar().getRect().contains(x,y))
+		    return rushHour.getEscapeCar();
+
         return null;
     }
 }

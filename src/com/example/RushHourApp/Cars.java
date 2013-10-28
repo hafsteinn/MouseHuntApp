@@ -21,12 +21,13 @@ public class Cars
 
 	}
 
-	public Cars(Rect rect, boolean vertical, String backgroundURL, int length)
+	public Cars(Rect rect, boolean vertical, String backgroundURL, int length, int color)
 	{
 		this.rect = rect;
 		this.vertical = vertical;
 		this.backgroundURL = backgroundURL;
 		this.length = length;
+		this.color = color;
 	}
 
 	public Rect getRect()

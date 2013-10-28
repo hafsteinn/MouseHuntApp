@@ -1,6 +1,7 @@
 package com.example.RushHourApp;
 
 import android.app.Activity;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 
 /**
@@ -13,6 +14,7 @@ import android.os.Bundle;
 public class BoardActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.boardview);
+
+	    setContentView(R.layout.boardview);
     }
 }
