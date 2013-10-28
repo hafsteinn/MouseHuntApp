@@ -23,28 +23,50 @@ public class DrawView extends View {
         int  color;
     }
 
+    private int m_cellWidth = 0;
+    private int m_cellHeight = 0;
+    private char[][] m_board = new char[6][6];
     Paint mPaint = new Paint();
     ArrayList<MyShape> mShapes = new ArrayList<MyShape>();
     MyShape mMovingShape = null;
+    Rect rect = new Rect();
 
     public DrawView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mPaint.setColor( Color.WHITE );
+        mPaint.setStyle( Paint.Style.STROKE );
 
         mShapes.add(new MyShape(new Rect(0, 0, 100, 100), Color.RED));
         mShapes.add( new MyShape( new Rect( 200, 300, 300, 350), Color.BLUE ) );
     }
 
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int size = Math.min(getMeasuredWidth(), getMeasuredHeight());
+        setMeasuredDimension(size, size);
+    }
+
+    @Override
+    protected void onSizeChanged(int xNew, int yNew, int xOld, int yOld) {
+        m_cellWidth = xNew / 3;
+        m_cellHeight = yNew / 3;
+    }
+
     protected void onDraw( Canvas canvas ) {
+
         for ( MyShape shape : mShapes ) {
             mPaint.setColor( shape.color );
             canvas.drawRect( shape.rect, mPaint );
         }
+
     }
 
     public boolean onTouchEvent( MotionEvent event ) {
 
         int x = (int) event.getX();
         int y = (int) event.getY();
+
 
         switch ( event.getAction() ) {
             case MotionEvent.ACTION_DOWN:
