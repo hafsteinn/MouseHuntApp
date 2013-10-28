@@ -4,8 +4,15 @@ package com.example.RushHourApp;/*
  * Time: 09:11
  */
 
+import android.*;
+import android.R;
+import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.graphics.Rect;
+import android.util.DisplayMetrics;
+import android.view.Display;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -14,9 +21,12 @@ public class RushHour
 {
 	private ArrayList<Cars> cars;
 	private Cars escapeCar;
+    private int CELL_WIDTH;
 
-	public RushHour()
+
+	public RushHour(int width)
 	{
+        CELL_WIDTH = width / 6;
 	}
 
 	public RushHour(ArrayList<Cars> cars, Cars escapeCar)
@@ -124,8 +134,8 @@ public class RushHour
 
 	private void setDimensions()
 	{
-		escapeCar.setRect(new Rect(escapeCar.getX()*120, escapeCar.getY()*120,escapeCar.getX()*120 + escapeCar.getLength()*120,
-				escapeCar.getY()*120 + 120
+		escapeCar.setRect(new Rect(escapeCar.getX()*CELL_WIDTH, escapeCar.getY()*CELL_WIDTH,escapeCar.getX()*CELL_WIDTH + escapeCar.getLength()*CELL_WIDTH,
+				escapeCar.getY()*CELL_WIDTH + CELL_WIDTH
 				));
 		escapeCar.setColor(Color.RED);
 
@@ -134,12 +144,12 @@ public class RushHour
 			c.setColor(Color.BLUE);
 			if(c.isVertical())
 			{
-				c.setRect(new Rect(c.getX()*120, c.getY()*120, c.getX()*120 + 120,
-						c.getY()*120 + c.getLength()*120));
+				c.setRect(new Rect(c.getX()*CELL_WIDTH, c.getY()*CELL_WIDTH, c.getX()*CELL_WIDTH + CELL_WIDTH,
+						c.getY()*CELL_WIDTH + c.getLength()*CELL_WIDTH));
 			}
 			else
 			{
-				c.setRect(new Rect(c.getX()*120, c.getY()*120, c.getX()*120 + c.getLength()*120, c.getY()*120 + 120));
+				c.setRect(new Rect(c.getX()*CELL_WIDTH, c.getY()*CELL_WIDTH, c.getX()*CELL_WIDTH + c.getLength()*CELL_WIDTH, c.getY()*CELL_WIDTH + CELL_WIDTH));
 			}
 		}
 	}
