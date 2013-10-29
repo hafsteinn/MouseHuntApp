@@ -8,39 +8,38 @@ import android.graphics.Color;
 import android.graphics.Rect;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class RushHour
 {
-	private ArrayList<Cars> cars;
-	private Cars escapeCar;
+	private ArrayList<Car> cars;
+	private Car escapeCar;
 
 	public RushHour()
 	{
 	}
 
-	public RushHour(ArrayList<Cars> cars, Cars escapeCar)
+	public RushHour(ArrayList<Car> cars, Car escapeCar)
 	{
 		this.cars = cars;
 		this.escapeCar = escapeCar;
 	}
 
-	public ArrayList<Cars> getCars()
+	public ArrayList<Car> getCars()
 	{
 		return cars;
 	}
 
-	public void setCars(ArrayList<Cars> cars)
+	public void setCars(ArrayList<Car> cars)
 	{
 		this.cars = cars;
 	}
 
-	public Cars getEscapeCar()
+	public Car getEscapeCar()
 	{
 		return escapeCar;
 	}
 
-	public void setEscapeCar(Cars escapeCar)
+	public void setEscapeCar(Car escapeCar)
 	{
 		this.escapeCar = escapeCar;
 	}
@@ -60,7 +59,7 @@ public class RushHour
 		sb.append(escapeCar.getX() + ' ' + escapeCar.getY() + ' ' + escapeCar.getLength());
 		sb.append("), ");
 
-		for(Cars c : cars)
+		for(Car c : cars)
 		{
 			sb.append('(');
 
@@ -87,7 +86,7 @@ public class RushHour
 		String[] s = state.split(",");
 
 		if(escapeCar == null)
-			escapeCar = new Cars();
+			escapeCar = new Car();
 
 		String escapeCarSettings = s[0];
 
@@ -101,12 +100,12 @@ public class RushHour
 		escapeCar.setLength(escapeCarSettings.charAt(7) - 48);
 
 		if(cars == null)
-			cars = new ArrayList<Cars>();
+			cars = new ArrayList<Car>();
 
 		for(int i = 1 ; i < s.length ; i++)
 		{
 			String carSettings = s[i];
-			Cars car = new Cars();
+			Car car = new Car();
 
 			if(carSettings.charAt(2) == 'V')
 				car.setVertical(true);
@@ -125,11 +124,11 @@ public class RushHour
 	private void setDimensions()
 	{
 		escapeCar.setRect(new Rect(escapeCar.getX()*120, escapeCar.getY()*120,escapeCar.getX()*120 + escapeCar.getLength()*120,
-				escapeCar.getY()*120 + 120
-				));
+				escapeCar.getY()*120 + 120));
 		escapeCar.setColor(Color.RED);
+		escapeCar.getRect().inset((int)(escapeCar.getRect().width()*0.01), (int)(escapeCar.getRect().height()*0.01));
 
-		for(Cars c : cars)
+		for(Car c : cars)
 		{
 			c.setColor(Color.BLUE);
 			if(c.isVertical())
@@ -141,6 +140,7 @@ public class RushHour
 			{
 				c.setRect(new Rect(c.getX()*120, c.getY()*120, c.getX()*120 + c.getLength()*120, c.getY()*120 + 120));
 			}
+			c.getRect().inset((int)(c.getRect().width()*0.01), (int)(c.getRect().height()*0.01));
 		}
 	}
 }

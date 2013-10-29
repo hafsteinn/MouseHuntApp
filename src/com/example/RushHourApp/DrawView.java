@@ -1,7 +1,6 @@
 package com.example.RushHourApp;
 
 import android.content.Context;
-import android.content.res.AssetManager;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -29,10 +28,13 @@ public class DrawView extends View {
 
     private int cellWidth = 0;
     private int cellHeight = 0;
+	private int relativeX = 0;
+	private int relativeY = 0;
+
 	private RushHour rushHour;
     Paint paint = new Paint();
 	Paint carPaint = new Paint();
-    Cars movingCar = null;
+    Car movingCar = null;
 	ShapeDrawable shape = new ShapeDrawable(new OvalShape());
     Rect rect = new Rect();
 
@@ -53,12 +55,8 @@ public class DrawView extends View {
 
 	    System.out.println(setting);
 
-	    ArrayList<Cars> cars = new ArrayList<Cars>();
+	    ArrayList<Car> cars = new ArrayList<Car>();
 
-	    /*Cars escapeCar = new Cars(new Rect(120, 2*120, 3*120, 3*120),false, "", 2 , Color.RED);
-	    cars.add(new Cars(new Rect(0, 120, 120, 4*120), true, "", 3, Color.GREEN));
-	    cars.add(new Cars(new Rect(0, 0, 2*120, 120), false, "", 2, Color.BLUE));
-		cars.add(new Cars(new Rect(3*120, 120, 4*120, 4*120), true, "", 3, Color.CYAN));  */
 
 	    rushHour = new RushHour();
 
@@ -91,10 +89,12 @@ public class DrawView extends View {
 		    }
 	    }
 
-	    for ( Cars c : rushHour.getCars() ) {
+	    for ( Car c : rushHour.getCars() ) {
 		    carPaint.setColor( c.getColor() );
 		    if(c.getRect() != null)
-		        canvas.drawRect( c.getRect(), carPaint );
+		    {
+			    canvas.drawRect( c.getRect(), carPaint );
+		    }
 	    }
 
 	    // draw the escape car
@@ -111,10 +111,14 @@ public class DrawView extends View {
         int x = (int) event.getX();
         int y = (int) event.getY();
 
-
         switch ( event.getAction() ) {
             case MotionEvent.ACTION_DOWN:
                 movingCar = findShape( x, y );
+	            if(movingCar != null)
+	            {
+	                relativeX = x - movingCar.getRect().left;
+		            relativeY = y - movingCar.getRect().top;
+	            }
                 break;
             case MotionEvent.ACTION_UP:
                 if ( movingCar != null ) {
@@ -124,8 +128,11 @@ public class DrawView extends View {
                 break;
             case MotionEvent.ACTION_MOVE:
                 if ( movingCar != null ) {
-                    x = Math.min( x, getWidth() - movingCar.getRect().width() );
-                    movingCar.getRect().offsetTo(x, y);
+                   // x = Math.min( x, getWidth() - movingCar.getRect().width() );
+	                if(movingCar.isVertical())
+                        movingCar.getRect().offsetTo(movingCar.getRect().left , y - relativeY);
+	                else
+	                	movingCar.getRect().offsetTo(x - relativeX, movingCar.getRect().top);
                     invalidate();
                 }
                 break;
@@ -133,8 +140,8 @@ public class DrawView extends View {
         return true;
     }
 
-    private Cars findShape( int x, int y ) {
-        for ( Cars c : rushHour.getCars() ) {
+    private Car findShape( int x, int y ) {
+        for ( Car c : rushHour.getCars() ) {
             if ( c.getRect().contains(x, y) ) {
                 return c;
             }

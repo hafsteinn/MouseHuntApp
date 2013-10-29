@@ -6,7 +6,7 @@ package com.example.RushHourApp;/*
 
 import android.graphics.Rect;
 
-public class Cars
+public class Car
 {
 	private Rect rect;
 	private boolean vertical;
@@ -16,12 +16,12 @@ public class Cars
 	private int length;
 	private int color;
 
-	public Cars()
+	public Car()
 	{
 
 	}
 
-	public Cars(Rect rect, boolean vertical, String backgroundURL, int length, int color)
+	public Car(Rect rect, boolean vertical, String backgroundURL, int length, int color)
 	{
 		this.rect = rect;
 		this.vertical = vertical;
