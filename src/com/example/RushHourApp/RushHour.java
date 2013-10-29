@@ -13,9 +13,11 @@ public class RushHour
 {
 	private ArrayList<Car> cars;
 	private Car escapeCar;
+	private int width;
 
-	public RushHour()
+	public RushHour(int width)
 	{
+		this.width = width/6;
 	}
 
 	public RushHour(ArrayList<Car> cars, Car escapeCar)
@@ -123,8 +125,8 @@ public class RushHour
 
 	private void setDimensions()
 	{
-		escapeCar.setRect(new Rect(escapeCar.getX()*120, escapeCar.getY()*120,escapeCar.getX()*120 + escapeCar.getLength()*120,
-				escapeCar.getY()*120 + 120));
+		escapeCar.setRect(new Rect(escapeCar.getX()*width, escapeCar.getY()*width ,escapeCar.getX()* width + escapeCar.getLength()*width,
+				escapeCar.getY()*width + width));
 		escapeCar.setColor(Color.RED);
 		escapeCar.getRect().inset((int)(escapeCar.getRect().width()*0.01), (int)(escapeCar.getRect().height()*0.01));
 
@@ -133,12 +135,12 @@ public class RushHour
 			c.setColor(Color.BLUE);
 			if(c.isVertical())
 			{
-				c.setRect(new Rect(c.getX()*120, c.getY()*120, c.getX()*120 + 120,
-						c.getY()*120 + c.getLength()*120));
+				c.setRect(new Rect(c.getX()*width, c.getY()*width, c.getX()*width + width,
+						c.getY()*width + c.getLength()*width));
 			}
 			else
 			{
-				c.setRect(new Rect(c.getX()*120, c.getY()*120, c.getX()*120 + c.getLength()*120, c.getY()*120 + 120));
+				c.setRect(new Rect(c.getX()*width, c.getY()*width, c.getX()*width + c.getLength()*width, c.getY()*width + width));
 			}
 			c.getRect().inset((int)(c.getRect().width()*0.01), (int)(c.getRect().height()*0.01));
 		}
