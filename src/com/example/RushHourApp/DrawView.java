@@ -8,6 +8,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -43,6 +44,8 @@ public class DrawView extends View {
         paint.setColor( Color.BLACK );
         paint.setStyle( Paint.Style.STROKE );
 
+
+
 	    String setting = "";
 	    try
 	    {
@@ -58,7 +61,10 @@ public class DrawView extends View {
 	    ArrayList<Car> cars = new ArrayList<Car>();
 
 
-	    rushHour = new RushHour();
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+        int width = metrics.widthPixels;
+
+	    rushHour = new RushHour(width);
 
 	    rushHour.setState(setting);
     }
