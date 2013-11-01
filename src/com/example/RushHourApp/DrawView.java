@@ -1,10 +1,7 @@
 package com.example.RushHourApp;
 
 import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
+import android.graphics.*;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.util.AttributeSet;
@@ -17,15 +14,8 @@ import java.util.ArrayList;
 
 public class DrawView extends View {
 
-    private class MyShape {
+    boolean done = true;
 
-        MyShape( Rect r, int c ) {
-            rect = r;
-            color = c;
-        }
-        Rect rect;
-        int  color;
-    }
 
     private int cellWidth = 0;
     private int cellHeight = 0;
@@ -34,15 +24,34 @@ public class DrawView extends View {
 
 	private RushHour rushHour;
     Paint paint = new Paint();
-	Paint carPaint = new Paint();
+
+
     Car movingCar = null;
 	ShapeDrawable shape = new ShapeDrawable(new OvalShape());
     Rect rect = new Rect();
+
+
+    //texture related stuff
+    Paint regularCarPaint = new Paint();
+    Paint regularCarPaintHorizontal = new Paint();
+    Paint escapeCarPaint = new Paint();
+    Bitmap escapeCarBitmap;
+    Bitmap regularCarBitmap;
+    Bitmap regularCarBitmapHorizontal;
+    Matrix escapeCarMatrix = new Matrix();
+    Matrix regularCarMatrix = new Matrix();
+    Matrix regularCarMatixHorizontal = new Matrix();
 
     public DrawView(Context context, AttributeSet attrs) {
         super(context, attrs);
         paint.setColor( Color.BLACK );
         paint.setStyle( Paint.Style.STROKE );
+
+        //Create Bitmap for escape Car
+        escapeCarBitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.mouse_horizontal);
+        //Create Bitmap for regular car
+        regularCarBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.mousetrap_vertical_ready);
+        regularCarBitmapHorizontal = BitmapFactory.decodeResource(context.getResources(), R.drawable.mousetrap_horizontal_ready);
 
 
 
@@ -82,6 +91,7 @@ public class DrawView extends View {
         cellHeight = yNew / 6;
     }
 
+
     protected void onDraw( Canvas canvas ) {
 
 	    for ( int r=5; r>=0; --r ) {
@@ -96,19 +106,45 @@ public class DrawView extends View {
 	    }
 
 	    for ( Car c : rushHour.getCars() ) {
-		    carPaint.setColor( c.getColor() );
+		    //carPaint.setColor( c.getColor() );
 		    if(c.getRect() != null)
 		    {
-			    canvas.drawRect( c.getRect(), carPaint );
+                if(!c.isVertical())
+                {
+
+                    BitmapShader regularCarShaderHorizontal = new BitmapShader(regularCarBitmapHorizontal,Shader.TileMode.CLAMP,Shader.TileMode.CLAMP);
+                    regularCarPaintHorizontal.setShader(regularCarShaderHorizontal);
+                    regularCarBitmapHorizontal=Bitmap.createScaledBitmap(regularCarBitmapHorizontal, c.getRect().width(), c.getRect().height(), true);
+                    regularCarMatixHorizontal.setTranslate(c.getRect().centerX() - c.getRect().width()/2, c.getRect().centerY() - c.getRect().height()/2);
+                    regularCarPaintHorizontal.getShader().setLocalMatrix(regularCarMatixHorizontal);
+
+                    canvas.drawRect( c.getRect(), regularCarPaintHorizontal );
+                }
+                else
+                {
+                    BitmapShader regularCarShader = new BitmapShader(regularCarBitmap,Shader.TileMode.CLAMP,Shader.TileMode.CLAMP);
+                    regularCarPaint.setShader(regularCarShader);
+                    regularCarBitmap=Bitmap.createScaledBitmap(regularCarBitmap, c.getRect().width(), c.getRect().height(), true);
+                    regularCarMatrix.setTranslate(c.getRect().centerX() - c.getRect().width()/2, c.getRect().centerY() - c.getRect().height()/2);
+                    regularCarPaint.getShader().setLocalMatrix(regularCarMatrix);
+
+                    canvas.drawRect( c.getRect(), regularCarPaint );
+                }
 		    }
 	    }
 
 	    // draw the escape car
-	    carPaint.setColor(rushHour.getEscapeCar().getColor());
 	    if(rushHour.getEscapeCar() != null)
 	    {
 		    if(rushHour.getEscapeCar().getRect() != null)
-			    canvas.drawRect(rushHour.getEscapeCar().getRect(), carPaint);
+            {
+                BitmapShader escapeCarShader = new BitmapShader(escapeCarBitmap,Shader.TileMode.CLAMP,Shader.TileMode.CLAMP);
+                escapeCarPaint.setShader(escapeCarShader);
+                escapeCarBitmap=Bitmap.createScaledBitmap(escapeCarBitmap, rushHour.getEscapeCar().getRect().width(), rushHour.getEscapeCar().getRect().height(), true);
+                escapeCarMatrix.setTranslate(rushHour.getEscapeCar().getRect().centerX() - rushHour.getEscapeCar().getRect().width()/2, rushHour.getEscapeCar().getRect().centerY() - rushHour.getEscapeCar().getRect().height()/2);
+                escapeCarPaint.getShader().setLocalMatrix(escapeCarMatrix);
+			    canvas.drawRect(rushHour.getEscapeCar().getRect(), escapeCarPaint);
+            }
 	    }
     }
 
