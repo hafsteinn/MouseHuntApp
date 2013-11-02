@@ -21,6 +21,8 @@ public class DrawView extends View {
     private int cellHeight = 0;
 	private int relativeX = 0;
 	private int relativeY = 0;
+	private int touchDownX = 0;
+	private int touchDownY = 0;
 
 	private RushHour rushHour;
     Paint paint = new Paint();
@@ -158,6 +160,8 @@ public class DrawView extends View {
                 movingCar = findShape( x, y );
 	            if(movingCar != null)
 	            {
+		            touchDownX = x;
+		            touchDownY = y;
 	                relativeX = x - movingCar.getRect().left;
 		            relativeY = y - movingCar.getRect().top;
 	            }
@@ -172,9 +176,31 @@ public class DrawView extends View {
                 if ( movingCar != null ) {
                    // x = Math.min( x, getWidth() - movingCar.getRect().width() );
 	                if(movingCar.isVertical())
-                        movingCar.getRect().offsetTo(movingCar.getRect().left , y - relativeY);
+	                {
+		                int currentCell = movingCar.getRect().top / cellHeight;
+		                int cellNo = (y - relativeY)/cellHeight;
+
+		                if(cellNo < 0)
+			                cellNo = 0;
+                        else if(cellNo + movingCar.getLength() > 5)
+			                cellNo = 6 - movingCar.getLength();
+
+		                movingCar.getRect().offsetTo(movingCar.getRect().left , cellNo*cellHeight);
+	                }
 	                else
-	                	movingCar.getRect().offsetTo(x - relativeX, movingCar.getRect().top);
+	                {
+		                int currentCell = movingCar.getRect().left / cellWidth;
+		                int cellNo = (x - relativeX)/cellWidth; //get the cell index
+						boolean moveRight = x > touchDownX;
+		                if(cellNo < 0)
+			                cellNo = 0;
+		                else if(cellNo + movingCar.getLength() > 5)
+			                cellNo = 6 - movingCar.getLength();
+
+		                if(!isCollisionX(movingCar,moveRight))
+		                    movingCar.getRect().offsetTo(cellNo*cellWidth, movingCar.getRect().top);
+	                }
+
                     invalidate();
                 }
                 break;
@@ -193,4 +219,29 @@ public class DrawView extends View {
 
         return null;
     }
+
+	private boolean isCollisionX(Car collisionCar, boolean moveRight)
+	{
+		for(Car c : rushHour.getCars())
+		{
+			if(collisionCar.equals(c))
+				continue;
+
+			// check if collision could occur according to the Y-values
+			if(collisionCar.getRect().top >= c.getRect().top && collisionCar.getRect().bottom <= c.getRect().bottom)
+			{
+				if(moveRight)
+				{
+					if(collisionCar.getRect().right >= c.getRect().left)
+						return true;
+				}
+				else
+				{
+					if(collisionCar.getRect().left <= c.getRect().right)
+						return true;
+				}
+			}
+		}
+		return false;
+	}
 }

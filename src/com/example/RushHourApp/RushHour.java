@@ -75,7 +75,7 @@ public class RushHour
 			sb.append("), ");
 		}
 
-		System.out.println(sb.toString());
+		//System.out.println(sb.toString());
 
 		return sb.toString();
 	}
