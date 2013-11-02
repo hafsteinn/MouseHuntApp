@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.io.IOException;
+
 /**
  * Created with IntelliJ IDEA.
  * User: yngvi
@@ -14,16 +16,18 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "PUZZLES_DB";
-    public static final int DB_VERSION = 6;
+    public static final int DB_VERSION = 13;
+
 
     public static final String TablePuzzles = "puzzles";
-    public static final String[] TablePuzzlesCols = { "_id", "sid", "name", "isFinished" };
+    public static final String[] TablePuzzlesCols = { "_id", "sid", "name", "layout","isFinished" };
 
     private static final String sqlCreateTablePuzzles =
             "CREATE TABLE puzzles (" +
                     "_id  INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "sid  INTEGER NOT NULL," +
                     "name TEXT," +
+                    "layout TEXT," +
                     "isFinished INTEGER" +
                     ");";
 
@@ -31,9 +35,9 @@ public class DBHelper extends SQLiteOpenHelper {
             "DROP TABLE IF EXISTS puzzles;";
 
     public DBHelper(Context context ) {
-
         super(context, DB_NAME, null, DB_VERSION);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
@@ -45,4 +49,9 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL( sqlDropTablePuzzles );
         onCreate( sqLiteDatabase );
     }
+
+
+
+
+
 }

@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.io.IOException;
+
 /**
  * Created with IntelliJ IDEA.
  * User: yngvi
@@ -44,7 +46,8 @@ public class PuzzleAdapter {
         ContentValues contentValues = new ContentValues();
         contentValues.put( cols[1], ((Integer)sid).toString() );
         contentValues.put( cols[2], name );
-        contentValues.put( cols[3], isFinished ? "1" : "0" );
+        contentValues.put( cols[3], layout);
+        contentValues.put( cols[4], isFinished ? "1" : "0" );
         openToWrite();
         long value = db.insert(DBHelper.TablePuzzles, null, contentValues );
         close();
@@ -77,4 +80,7 @@ public class PuzzleAdapter {
                 cols, cols[1] + "=" + sid , null, null, null, null );
         return cursor;
     }
+
+
+
 }

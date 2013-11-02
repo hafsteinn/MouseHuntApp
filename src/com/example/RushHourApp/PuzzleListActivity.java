@@ -2,12 +2,15 @@ package com.example.RushHourApp;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+
+import java.io.IOException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,6 +26,8 @@ public class PuzzleListActivity extends ListActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         Cursor cursor = mPuzzlesAdapter.queryPuzzles();
         String[] cols = DBHelper.TablePuzzlesCols;
@@ -46,7 +51,12 @@ public class PuzzleListActivity extends ListActivity {
         });
 
         setListAdapter(mCursorAdapter);
+
+        if(mCursorAdapter.getCount() < 40)
+            addPuzzlesToDB(this);
     }
+
+
 
     protected void onRestart() {
         super.onRestart();
@@ -60,6 +70,28 @@ public class PuzzleListActivity extends ListActivity {
 
     protected void onListItemClick( ListView l, View v, int position, long id  ) {
         // ...
+    }
+
+    private void addPuzzlesToDB(Context context)
+    {
+        String layout = "";
+
+        for(int i = 1; i <= 40;i++ )
+        {
+            try
+            {
+                layout = ReadXML.read(context.getAssets().open("challenge_classic40.xml"), i);
+            }
+            catch(IOException iox)
+            {
+                System.out.println("Error opening xml-file");
+            }
+
+
+            mPuzzlesAdapter.insertPuzzle(i,"PUZZLE" + " " + i,layout,false);
+
+        }
+
     }
 
 }

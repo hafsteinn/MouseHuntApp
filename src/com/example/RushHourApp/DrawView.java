@@ -69,32 +69,16 @@ public class DrawView extends View {
         int width = metrics.widthPixels;
         rushHour = new RushHour(width);
 
-        addPuzzlesToDB(context);
+        System.out.println("..before..");
 
+        Cursor cursor = puzzleAdapter.queryPuzzle(1);
+        cursor.moveToFirst();
+        String value = cursor.getString(3);
 
-	    //rushHour.setState(puzzleAdapter.queryPuzzle(1).getString(3));
-    }
+        System.out.println("TEST STRENGUR: " + value);
+        System.out.println("..after..");
 
-    private void addPuzzlesToDB(Context context)
-    {
-        String layout = "";
-
-        for(int i = 1; i <= 40;i++ )
-        {
-            try
-            {
-                layout = ReadXML.read(context.getAssets().open("challenge_classic40.xml"), i);
-            }
-            catch(IOException iox)
-            {
-                System.out.println("Error opening xml-file");
-            }
-
-
-            puzzleAdapter.insertPuzzle(i,"Puzzle" + " " + i, layout, false);
-
-        }
-
+	    rushHour.setState("(H 1 2 2), (H 1 3 2), (V 3 2 3), (V 1 4 2), (H 2 5 2), (V 5 3 3)");
     }
 
     @Override
