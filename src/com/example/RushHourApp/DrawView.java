@@ -1,9 +1,16 @@
 package com.example.RushHourApp;
 
+import android.content.ContentResolver;
 import android.content.Context;
+import android.database.CharArrayBuffer;
+import android.database.ContentObserver;
+import android.database.Cursor;
+import android.database.DataSetObserver;
 import android.graphics.*;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
+import android.net.Uri;
+import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
@@ -14,8 +21,7 @@ import java.util.ArrayList;
 
 public class DrawView extends View {
 
-    boolean done = true;
-
+    private PuzzleAdapter puzzleAdapter;
 
     private int cellWidth = 0;
     private int cellHeight = 0;
@@ -24,6 +30,8 @@ public class DrawView extends View {
 
 	private RushHour rushHour;
     Paint paint = new Paint();
+
+
 
 
     Car movingCar = null;
@@ -53,29 +61,38 @@ public class DrawView extends View {
         regularCarBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.mousetrap_vertical_ready);
         regularCarBitmapHorizontal = BitmapFactory.decodeResource(context.getResources(), R.drawable.mousetrap_horizontal_ready);
 
-
-
-	    String setting = "";
-	    try
-	    {
-		    setting = ReadXML.read(context.getAssets().open("challenge_classic40.xml"));
-	    }
-	    catch(IOException iox)
-	    {
-		    System.out.println("Error opening xml-file");
-	    }
-
-	    System.out.println(setting);
-
-	    ArrayList<Car> cars = new ArrayList<Car>();
-
+        puzzleAdapter = new PuzzleAdapter(context);
 
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         int width = metrics.widthPixels;
+        rushHour = new RushHour(width);
 
-	    rushHour = new RushHour(width);
+        addPuzzlesToDB(context);
 
-	    rushHour.setState(setting);
+
+	    //rushHour.setState(puzzleAdapter.queryPuzzle(1).getString(3));
+    }
+
+    private void addPuzzlesToDB(Context context)
+    {
+        String layout = "";
+
+        for(int i = 1; i <= 40;i++ )
+        {
+            try
+            {
+                layout = ReadXML.read(context.getAssets().open("challenge_classic40.xml"), i);
+            }
+            catch(IOException iox)
+            {
+                System.out.println("Error opening xml-file");
+            }
+
+
+            puzzleAdapter.insertPuzzle(i,"Puzzle" + " " + i, layout, false);
+
+        }
+
     }
 
     @Override

@@ -17,8 +17,11 @@ import java.io.InputStream;
 public class ReadXML
 {
 
-	public static String read(InputStream stream)
+	public static String read(InputStream stream, int id)
 	{
+
+        String strID = String.valueOf(id);
+
 		StringBuilder sb = new StringBuilder();
 		try
 		{
@@ -30,7 +33,7 @@ public class ReadXML
 
 			//NodeList nList = doc.getElementsByTagName("puzzle");
 
-			Element element = doc.getElementById("1");
+			Element element = doc.getElementById(strID);
 
 			sb.append(element.getElementsByTagName("setup").item(0).getTextContent());
 

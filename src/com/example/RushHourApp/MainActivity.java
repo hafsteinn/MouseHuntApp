@@ -33,28 +33,10 @@ public class MainActivity extends Activity
         startActivity(intent);
     }
 
-
-     /*
-    public void buttonPressed( View view )
-    {
-        Button buttonView = (Button) view;
-        switch ( view.getId() ) {
-            case R.id.buttonPLAY:
-                    //what to do if play button is pressed ?
-                break;
-            case R.id.buttonPuzzles:
-                    //what to do if puzzles button is pressed ?
-                break;
-            case R.id.buttonOptions:
-                    //what to do if Options button is pressed ?
-                break;
-            case R.id.buttonAbout:
-                    startAboutActivity(view);
-               // showabout();
-                break;
-
-        }
-
+    public void startPuzzleListActivity(View view) {
+        Intent intent = new Intent(this, PuzzleListActivity.class);
+        startActivity(intent);
     }
-    */
+
+    //TODO: fall til að keyra puzzle list.
 }

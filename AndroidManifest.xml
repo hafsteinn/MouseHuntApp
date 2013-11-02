@@ -27,6 +27,7 @@
                 android:value="com.example.RushHourApp.MainActivity" />
         </activity>
         <activity android:name=".BoardActivity" android:label="BoardActivity"/>
+        <activity android:name=".PuzzleListActivity" android:label="PuzzleList"/>
     </application>
 
 </manifest>
