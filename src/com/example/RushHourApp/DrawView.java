@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -21,7 +22,9 @@ import java.util.ArrayList;
 
 public class DrawView extends View {
 
-    private PuzzleAdapter puzzleAdapter;
+  //  private PuzzleAdapter puzzleAdapter;
+	private ArrayList<Car> cars;
+	private Car escapeCar;
 
     private int cellWidth = 0;
     private int cellHeight = 0;
@@ -30,17 +33,16 @@ public class DrawView extends View {
 	private int touchDownX = 0;
 	private int touchDownY = 0;
 
-	private RushHour rushHour;
+	// private RushHour rushHour;
     Paint paint = new Paint();
-
-
-
+	Paint carPaint = new Paint();
 
     Car movingCar = null;
 	ShapeDrawable shape = new ShapeDrawable(new OvalShape());
     Rect rect = new Rect();
+	private OnMoveEventHandler moveEventHandler = null;
 
-
+	/*
     //texture related stuff
     Paint regularCarPaint = new Paint();
     Paint regularCarPaintHorizontal = new Paint();
@@ -51,34 +53,21 @@ public class DrawView extends View {
     Matrix escapeCarMatrix = new Matrix();
     Matrix regularCarMatrix = new Matrix();
     Matrix regularCarMatixHorizontal = new Matrix();
+    */
 
     public DrawView(Context context, AttributeSet attrs) {
         super(context, attrs);
         paint.setColor( Color.BLACK );
         paint.setStyle( Paint.Style.STROKE );
 
+	    /*
         //Create Bitmap for escape Car
         escapeCarBitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.mouse_horizontal);
         //Create Bitmap for regular car
         regularCarBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.mousetrap_vertical_ready);
         regularCarBitmapHorizontal = BitmapFactory.decodeResource(context.getResources(), R.drawable.mousetrap_horizontal_ready);
+        */
 
-        puzzleAdapter = new PuzzleAdapter(context);
-
-        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
-        int width = metrics.widthPixels;
-        rushHour = new RushHour(width);
-
-        System.out.println("..before..");
-
-        Cursor cursor = puzzleAdapter.queryPuzzle(1);
-        cursor.moveToFirst();
-        String value = cursor.getString(3);
-
-        System.out.println("TEST STRENGUR: " + value);
-        System.out.println("..after..");
-
-	    rushHour.setState("(H 1 2 2), (H 1 3 2), (V 3 2 3), (V 1 4 2), (H 2 5 2), (V 5 3 3)");
     }
 
     @Override
@@ -94,8 +83,8 @@ public class DrawView extends View {
         cellHeight = yNew / 6;
     }
 
-
-    protected void onDraw( Canvas canvas ) {
+    protected void onDraw( Canvas canvas )
+    {
 
 	    for ( int r=5; r>=0; --r ) {
 		    for ( int c=0; c<6; ++c ) {
@@ -108,6 +97,23 @@ public class DrawView extends View {
 		    }
 	    }
 
+
+	    for ( Car c : cars)  {
+		    carPaint.setColor(Color.BLUE);
+		    if(c.getRect() != null)
+		    {
+			    canvas.drawRect( c.getRect(), carPaint );
+		    }
+	    }
+	    // draw the escape car
+	    carPaint.setColor(Color.RED);
+	    if(escapeCar != null)
+	    {
+		    if(escapeCar.getRect() != null)
+			    canvas.drawRect(escapeCar.getRect(), carPaint);
+	    }
+
+	    /*
 	    for ( Car c : rushHour.getCars() ) {
 		    //carPaint.setColor( c.getColor() );
 		    if(c.getRect() != null)
@@ -148,101 +154,194 @@ public class DrawView extends View {
                 escapeCarPaint.getShader().setLocalMatrix(escapeCarMatrix);
 			    canvas.drawRect(rushHour.getEscapeCar().getRect(), escapeCarPaint);
             }
-	    }
+	    }   */
     }
 
-    public boolean onTouchEvent( MotionEvent event ) {
+	public boolean onTouchEvent( MotionEvent event ) {
 
-        int x = (int) event.getX();
-        int y = (int) event.getY();
+		int x = (int) event.getX();
+		int y = (int) event.getY();
 
-        switch ( event.getAction() ) {
-            case MotionEvent.ACTION_DOWN:
-                movingCar = findShape( x, y );
-	            if(movingCar != null)
-	            {
-		            touchDownX = x;
-		            touchDownY = y;
-	                relativeX = x - movingCar.getRect().left;
-		            relativeY = y - movingCar.getRect().top;
-	            }
-                break;
-            case MotionEvent.ACTION_UP:
-                if ( movingCar != null ) {
-                    movingCar = null;
-                    // emit an custom event ....
-                }
-                break;
-            case MotionEvent.ACTION_MOVE:
-                if ( movingCar != null ) {
-                   // x = Math.min( x, getWidth() - movingCar.getRect().width() );
-	                if(movingCar.isVertical())
-	                {
-		                int currentCell = movingCar.getRect().top / cellHeight;
-		                int cellNo = (y - relativeY)/cellHeight;
+		switch ( event.getAction() ) {
+			case MotionEvent.ACTION_DOWN:
+				movingCar = findShape( x, y );
+				if(movingCar != null)
+				{
+					touchDownX = x;
+					touchDownY = y;
+					relativeX = x - movingCar.getRect().left;
+					relativeY = y - movingCar.getRect().top;
+				}
+				break;
+			case MotionEvent.ACTION_UP:
+				if ( movingCar != null ) {
+					movingCar = null;
+					// emit an custom event ....
+					if(escapeCar.getX() == 4 && moveEventHandler != null)
+					{
+						moveEventHandler.victory();
+					}
+				}
+				break;
+			case MotionEvent.ACTION_MOVE:
+				if ( movingCar != null ) {
+					// x = Math.min( x, getWidth() - movingCar.getRect().width() );
+					if(movingCar.isVertical())
+					{
+						int currentCell = movingCar.getRect().top / cellHeight;
+						int cellNo = (y - relativeY)/cellHeight;
+						boolean moveUp = cellNo < currentCell;
+
+		                if(cellNo != currentCell)
+		                    cellNo = moveUp ? currentCell - 1 : currentCell + 1;
 
 		                if(cellNo < 0)
 			                cellNo = 0;
                         else if(cellNo + movingCar.getLength() > 5)
 			                cellNo = 6 - movingCar.getLength();
 
-		                movingCar.getRect().offsetTo(movingCar.getRect().left , cellNo*cellHeight);
+		                if(!isCollisionY(movingCar, moveUp))
+		                {
+			                movingCar.getRect().offsetTo(movingCar.getRect().left , cellNo*cellHeight);
+			                movingCar.setY(cellNo);
+		                }
 	                }
 	                else
 	                {
 		                int currentCell = movingCar.getRect().left / cellWidth;
-		                int cellNo = (x - relativeX)/cellWidth; //get the cell index
-						boolean moveRight = x > touchDownX;
-		                if(cellNo < 0)
-			                cellNo = 0;
-		                else if(cellNo + movingCar.getLength() > 5)
-			                cellNo = 6 - movingCar.getLength();
+		                int cellNo = (x - relativeX)/cellWidth; //get the cell index to where we are moving
+		                boolean moveRight = cellNo > currentCell;
 
-		                if(!isCollisionX(movingCar,moveRight))
-		                    movingCar.getRect().offsetTo(cellNo*cellWidth, movingCar.getRect().top);
-	                }
+						if(cellNo != currentCell)
+							cellNo = moveRight ? currentCell + 1 : currentCell - 1;
 
-                    invalidate();
-                }
-                break;
-        }
-        return true;
-    }
+						if(cellNo < 0)
+							cellNo = 0;
+						else if(cellNo + movingCar.getLength() > 5)
+							cellNo = 6 - movingCar.getLength();
 
-    private Car findShape( int x, int y ) {
-        for ( Car c : rushHour.getCars() ) {
-            if ( c.getRect().contains(x, y) ) {
-                return c;
-            }
-        }
-	    if(rushHour.getEscapeCar().getRect().contains(x,y))
-		    return rushHour.getEscapeCar();
+						Log.w("TAG", currentCell + " --- " + cellNo);
 
-        return null;
-    }
+						if(!isCollisionX(movingCar,moveRight))
+						{
+							movingCar.getRect().offsetTo(cellNo*cellWidth, movingCar.getRect().top);
+							movingCar.setX(cellNo);
+						}
+					}
+
+					invalidate();
+
+				}
+				break;
+		}
+		return true;
+	}
+
+	private Car findShape( int x, int y ) {
+		for ( Car c : cars ) {
+			if ( c.getRect().contains(x, y) ) {
+				return c;
+			}
+		}
+		if(escapeCar.getRect().contains(x,y))
+			return escapeCar;
+
+		return null;
+	}
 
 	private boolean isCollisionX(Car collisionCar, boolean moveRight)
 	{
-		for(Car c : rushHour.getCars())
+		for(Car c : cars)
 		{
+			int verticalLength = c.isVertical() ?  (c.getLength() - 1) : 0;
+			int horizontalLength = !c.isVertical() ? (c.getLength() - 1) : 0;
 			if(collisionCar.equals(c))
 				continue;
 
-			// check if collision could occur according to the Y-values
-			if(collisionCar.getRect().top >= c.getRect().top && collisionCar.getRect().bottom <= c.getRect().bottom)
+			if(collisionCar.getY() >= c.getY() && collisionCar.getY() <= c.getY() + verticalLength) //check y-boundaries
 			{
 				if(moveRight)
 				{
-					if(collisionCar.getRect().right >= c.getRect().left)
+					if(collisionCar.getX() + (collisionCar.getLength()) == c.getX())
 						return true;
 				}
 				else
 				{
-					if(collisionCar.getRect().left <= c.getRect().right)
+					if(collisionCar.getX() - 1 == c.getX() + horizontalLength)
 						return true;
 				}
 			}
 		}
+
 		return false;
+	}
+
+	private boolean isCollisionY(Car collisionCar, boolean moveUp)
+	{
+		for (Car c : cars)
+		{
+			int verticalLength = c.isVertical() ?  (c.getLength() - 1) : 0;
+			int horizontalLength = !c.isVertical() ? (c.getLength() - 1) : 0;
+
+			if(collisionCar.equals(c))
+				continue;
+
+			if(collisionCar.getX() >= c.getX() && collisionCar.getX() <= c.getX() + horizontalLength) //check y-boundaries
+			{
+				if(moveUp)
+				{
+					if(collisionCar.getY() - 1 == c.getY() + verticalLength)
+						return true;
+				}
+				else
+				{
+					if(collisionCar.getY() + collisionCar.getLength() == c.getY())
+						return true;
+				}
+			}
+		}
+
+		Car escapeCar = this.escapeCar;
+
+		int verticalLength = escapeCar.isVertical() ?  (escapeCar.getLength() - 1) : 0;
+		int horizontalLength = !escapeCar.isVertical() ? (escapeCar.getLength() - 1) : 0;
+
+
+		if(collisionCar.getX() >= escapeCar.getX() && collisionCar.getX() <= escapeCar.getX() + horizontalLength) //check y-boundaries
+		{
+			if(moveUp)
+			{
+				if(collisionCar.getY() - 1 == escapeCar.getY() + verticalLength)
+					return true;
+			}
+			else
+			{
+				if(collisionCar.getY() + collisionCar.getLength() == escapeCar.getY())
+					return true;
+			}
+		}
+		return false;
+	}
+
+	private boolean checkWinner()
+	{
+		if(escapeCar.getX() == 4)
+			return true;
+		return false;
+	}
+
+	public void setCars(ArrayList<Car> cars)
+	{
+		this.cars = cars;
+	}
+
+	public void setEscapeCar(Car escapeCar)
+	{
+		this.escapeCar = escapeCar;
+	}
+
+	public void setMoveEventHandler(OnMoveEventHandler moveEventHandler)
+	{
+		this.moveEventHandler = moveEventHandler;
 	}
 }

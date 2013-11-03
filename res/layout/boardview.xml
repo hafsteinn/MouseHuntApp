@@ -6,9 +6,53 @@
               android:layout_height="match_parent">
 
     <com.example.RushHourApp.DrawView
+            android:id="@+id/drawview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#ffffff"
             />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/prevPuzzle"
+                    style="@style/btnStyleGenoa"
+                    android:text="Previous Puzzle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:onClick="onPrevClick"
+                />
+
+            <Button
+                    android:id="@+id/nextPuzzle"
+                    style="@style/btnStyleGenoa"
+                    android:text="Next Puzzle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:onClick="onNextClick"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/boardName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dip"
+                android:textSize="30dip"
+                android:textColor="#11F079"
+                />
+
+         </LinearLayout>
 
 </LinearLayout>

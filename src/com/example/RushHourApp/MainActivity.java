@@ -11,10 +11,6 @@ import android.view.View;
 public class MainActivity extends Activity
 {
 
-
-	/**
-	 * Called when the activity is first created.
-	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -30,6 +26,7 @@ public class MainActivity extends Activity
 
     public void startBoardActivity(View view) {
         Intent intent = new Intent(this, BoardActivity.class);
+	    intent.putExtra("BoardID", 1);
         startActivity(intent);
     }
 

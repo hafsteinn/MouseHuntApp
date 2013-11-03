@@ -3,9 +3,7 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@drawable/main_background"
-        >
-
+              android:background="@drawable/main_background" >
 
 
     <TableLayout
@@ -42,28 +40,10 @@
             <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
+                    android:background="@android:color/transparent"
                     android:text="Puzzles"
                     android:id="@+id/buttonPuzzles" android:layout_row="0" android:layout_column="0"
                     android:onClick="startPuzzleListActivity"
-                    android:textSize="25dip"
-                    android:fontFamily="times new roman"
-                    android:textColor="#000000"
-                    />
-        </TableRow>
-
-        <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="Options"
-                    android:id="@+id/buttonOptions" android:layout_row="0" android:layout_column="0"
-                    android:onClick="buttonPressed"
                     android:textSize="25dip"
                     android:fontFamily="times new roman"
                     android:textColor="#000000"
