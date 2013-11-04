@@ -38,45 +38,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736275be-6af0-46b5-8345-ac123b26f822" name="Default" comment="Added move logic&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/RushHourApp/OnMoveEventHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/custom_btn_genoa.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/toast_layout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java" afterPath="$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/RushHourApp/DrawView.java" afterPath="$PROJECT_DIR$/src/com/example/RushHourApp/DrawView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/RushHourApp/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/RushHourApp/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleListActivity.java" afterPath="$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/about.xml" afterPath="$PROJECT_DIR$/res/layout/about.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/boardview.xml" afterPath="$PROJECT_DIR$/res/layout/boardview.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/toast_layout.xml" afterPath="$PROJECT_DIR$/res/layout/toast_layout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RushHour.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383512440635" ignored="false" />
+    <file path="/main.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383524945444" ignored="false" />
     <file path="/MainActivity.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383490832789" ignored="false" />
-    <file path="/Dummy.txt" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383510741610" ignored="false" />
+    <file path="/Dummy.txt" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383514922122" ignored="false" />
     <file path="/About.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1382228902642" ignored="false" />
-    <file path="/about.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1382316454958" ignored="false" />
+    <file path="/about.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383522796601" ignored="false" />
     <file path="/AboutActivity.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1382311527063" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383502227539" ignored="false" />
-    <file path="/strings.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1382314182467" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383526355437" ignored="false" />
+    <file path="/strings.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383526047654" ignored="false" />
     <file path="/info.txt" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1382456320272" ignored="false" />
-    <file path="/BoardActivity.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383514272141" ignored="false" />
+    <file path="/BoardActivity.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383526019316" ignored="false" />
     <file path="/DrawView.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383502556258" ignored="false" />
-    <file path="/boardview.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383513709688" ignored="false" />
+    <file path="/boardview.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383525170797" ignored="false" />
     <file path="/fragment.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383494883119" ignored="false" />
     <file path="/ReadXML.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1382967323338" ignored="false" />
     <file path="/RushHour.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383054328917" ignored="false" />
     <file path="/Cars.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1382971806272" ignored="false" />
     <file path="/DBHelper.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383406445892" ignored="false" />
-    <file path="/PuzzleListActivity.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383510537116" ignored="false" />
+    <file path="/PuzzleListActivity.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383525556560" ignored="false" />
     <file path="/PuzzleAdapter.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383406287149" ignored="false" />
     <file path="/OnMoveEventHandler.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383486495263" ignored="false" />
     <file path="/puzzlelist.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383488846906" ignored="false" />
     <file path="/custom_btn_genoa.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383497758563" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/example/RushHourApp/BuildConfig.java" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383508757820" ignored="false" />
-    <file path="/toast_layout.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383511531805" ignored="false" />
+    <file path="/toast_layout.xml" changelist="736275be-6af0-46b5-8345-ac123b26f822" time="1383525975549" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +98,23 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java" line="102" class="com.example.RushHourApp.BoardActivity" package="com.example.RushHourApp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -138,53 +152,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java" line="102" class="com.example.RushHourApp.BoardActivity" package="com.example.RushHourApp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java" line="73" class="com.example.RushHourApp.BoardActivity$1" package="com.example.RushHourApp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleListActivity.java" line="57" class="com.example.RushHourApp.PuzzleListActivity$1" package="com.example.RushHourApp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -196,104 +163,83 @@
     <leaf>
       <file leaf-file-name="boardview.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/boardview.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="60" selection-start="1975" selection-end="1975" vertical-scroll-proportion="-34.68">
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toast_layout.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/toast_layout.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="45" selection-start="1956" selection-end="1956" vertical-scroll-proportion="-6.0">
+            <state line="11" column="40" selection-start="452" selection-end="452" vertical-scroll-proportion="-7.48">
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="puzzlelist.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/puzzlelist.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="32" selection-start="1354" selection-end="1354" vertical-scroll-proportion="-26.04">
+            <state line="7" column="134" selection-start="459" selection-end="459" vertical-scroll-proportion="7.48">
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PuzzleAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="80" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/DBHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="92" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="PuzzleListActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="25" selection-start="2619" selection-end="2619" vertical-scroll-proportion="0.0">
+            <state line="59" column="84" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnMoveEventHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/OnMoveEventHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="17" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="52" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-10.2">
               <folding>
-                <element signature="e#1274#2064#0" expanded="true" />
-                <element signature="e#2053#2054#0" expanded="true" />
+                <element signature="e#1371#2104#0" expanded="true" />
+                <element signature="e#2096#2097#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="toast_layout.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/toast_layout.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="37" selection-start="287" selection-end="287" vertical-scroll-proportion="-2.52">
+            <state line="2" column="35" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="5" selection-start="212" selection-end="212" vertical-scroll-proportion="-3.36">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="30" selection-start="68" selection-end="81" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom_btn_genoa.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/custom_btn_genoa.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="37" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="75" selection-start="1522" selection-end="1522" vertical-scroll-proportion="-0.6571429">
+            <state line="10" column="36" selection-start="345" selection-end="345" vertical-scroll-proportion="0.3962704">
               <folding />
             </state>
           </provider>
@@ -317,28 +263,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/RushHourApp/Car.java" />
-        <option value="$PROJECT_DIR$/src/com/example/RushHourApp/RushHour.java" />
         <option value="$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/example/RushHourApp/OnMoveEventHandler.java" />
         <option value="$PROJECT_DIR$/res/layout/puzzlelist.xml" />
         <option value="$PROJECT_DIR$/src/com/example/RushHourApp/MainActivity.java" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/drawable-hdpi/custom_btn_genoa.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/RushHourApp/DrawView.java" />
         <option value="$PROJECT_DIR$/src/com/example/RushHourApp/DBHelper.java" />
+        <option value="$PROJECT_DIR$/res/layout/about.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/res/layout/boardview.xml" />
         <option value="$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleListActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/toast_layout.xml" />
-        <option value="$PROJECT_DIR$/res/layout/boardview.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -368,7 +316,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -383,7 +331,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MouseHuntApp" />
+              <option name="myItemId" value="RushHourApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -393,7 +341,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MouseHuntApp" />
+              <option name="myItemId" value="RushHourApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -411,7 +359,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MouseHuntApp" />
+              <option name="myItemId" value="RushHourApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -429,79 +377,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MouseHuntApp" />
+              <option name="myItemId" value="RushHourApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RushHour" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MouseHuntApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RushHour" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MouseHuntApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RushHour" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MouseHuntApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="150" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="150" />
     <property name="project.structure.proportion" value="0.0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="150" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="154" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="150" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="828" />
@@ -512,13 +410,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="GalaxyNexus" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="MyAvd0" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -568,19 +466,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -607,6 +492,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -755,12 +653,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24654378" sideWeight="0.6339755" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.245827" sideWeight="0.8122867" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6331058" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -770,7 +668,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3225256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924694" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -778,8 +676,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23006135" sideWeight="0.6339755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36602452" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22954546" sideWeight="0.8122867" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18771331" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67064846" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -871,92 +769,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/Desktop/Námið/Android SDK/adt-bundle-windows-x86_64-20130917/sdk/platforms/android-18/android.jar!/android/content/Intent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="158" selection-end="158" vertical-scroll-proportion="0.33112583" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Desktop/Námið/Android SDK/adt-bundle-windows-x86_64-20130917/sdk/platforms/android-18/android.jar!/android/database/sqlite/SQLiteDatabase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="15" selection-start="8700" selection-end="8700" vertical-scroll-proportion="0.33112583" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="64" selection-start="1424" selection-end="1424" vertical-scroll-proportion="2.294702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Desktop/Námið/Android SDK/adt-bundle-windows-x86_64-20130917/sdk/platforms/android-18/android.jar!/android/database/AbstractWindowedCursor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="10" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/DrawView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="182" column="21" selection-start="6621" selection-end="6621" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="30" selection-start="68" selection-end="81" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="80" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/puzzlelist.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="32" selection-start="1354" selection-end="1354" vertical-scroll-proportion="-26.04">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/boardview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="45" selection-start="1956" selection-end="1956" vertical-scroll-proportion="-6.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="5" selection-start="212" selection-end="212" vertical-scroll-proportion="-3.36">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/toast_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="37" selection-start="287" selection-end="287" vertical-scroll-proportion="-2.52">
           <folding />
         </state>
       </provider>
@@ -968,6 +783,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="80" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/DBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="92" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
@@ -975,19 +797,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/puzzles_button.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/puzzlelist.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="32" selection-start="1354" selection-end="1354" vertical-scroll-proportion="1.24">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/about.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="26" selection-start="881" selection-end="881" vertical-scroll-proportion="0.52">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="134" selection-start="459" selection-end="459" vertical-scroll-proportion="7.48">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/boardview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="60" selection-start="1975" selection-end="1975" vertical-scroll-proportion="-34.68">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/OnMoveEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/toast_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="40" selection-start="452" selection-end="452" vertical-scroll-proportion="-7.48">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="25" selection-start="2619" selection-end="2619" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1274#2064#0" expanded="true" />
-            <element signature="e#2053#2054#0" expanded="true" />
-          </folding>
+        <state line="59" column="84" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="75" selection-start="1522" selection-end="1522" vertical-scroll-proportion="-0.6571429">
+        <state line="71" column="52" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-10.2">
+          <folding>
+            <element signature="e#1371#2104#0" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="30" selection-start="68" selection-end="81" vertical-scroll-proportion="0.079254076">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="35" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="345" selection-end="345" vertical-scroll-proportion="0.3962704">
           <folding />
         </state>
       </provider>

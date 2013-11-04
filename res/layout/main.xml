@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@drawable/main_background" >
-
+              android:background="@drawable/background_image_1" >
+<!-- Background image borrowed from: http://art-star.net/sitebuilder/images/black_20background_20patterns_20light_20_235_-1231x759.jpg-->
 
     <TableLayout
             android:id="@+id/grid"
             android:layout_width="150dip"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="center"
             android:stretchColumns="*"
-            android:paddingTop="70dip"
+            android:paddingTop="260dip"
             >
         <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingBottom="15dip"
 
                 >
             <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="Play"
+                    android:layout_height="50dip"
+                    android:background="@drawable/play_button"
                     android:id="@+id/buttonPLAY" android:layout_row="0" android:layout_column="0"
                     android:onClick="startBoardActivity"
                     android:textSize="25dip"
@@ -35,13 +36,12 @@
         <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:paddingBottom="15dip"
                 >
             <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="Puzzles"
+                    android:layout_height="50dip"
+                    android:background="@drawable/puzzles_button"
                     android:id="@+id/buttonPuzzles" android:layout_row="0" android:layout_column="0"
                     android:onClick="startPuzzleListActivity"
                     android:textSize="25dip"
@@ -56,9 +56,8 @@
                 >
             <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="About"
+                    android:layout_height="50dip"
+                    android:background="@drawable/about_button"
                     android:id="@+id/buttonAbout" android:layout_row="0" android:layout_column="0"
                     android:onClick="startAboutActivity"
                     android:textSize="25dip"

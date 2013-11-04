@@ -17,14 +17,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="6dip"
-                android:background="@drawable/about_background"
+                android:background="@drawable/about_background_image_1"
                 >
 
             <TextView
                     android:id="@+id/help_page_intro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/about_text"
                     android:textSize="25dip"
                     android:textColor="#000000"
                     android:padding="2dip"

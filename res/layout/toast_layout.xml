@@ -6,7 +6,7 @@
     android:padding="8dp"
     android:background="#000000"
     >
-    <ImageView android:src="@drawable/emo_im_cool"
+    <ImageView android:src="@drawable/yes"
         android:layout_width="50dip"
         android:layout_height="50dip"
         android:layout_marginRight="8dp"

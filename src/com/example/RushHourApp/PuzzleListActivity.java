@@ -57,7 +57,7 @@ public class PuzzleListActivity extends ListActivity {
                 if ( i==4 ) {
 	                System.out.println("PRINTING " + cursor.getInt(i));
                     ((ImageView) view).setImageResource(
-                            (cursor.getInt(i) == 0) ? R.drawable.emo_im_sad : R.drawable.emo_im_cool );
+                            (cursor.getInt(i) == 0) ? R.drawable.no : R.drawable.yes );
                     return true;
                 }
 
