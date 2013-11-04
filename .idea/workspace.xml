@@ -38,15 +38,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736275be-6af0-46b5-8345-ac123b26f822" name="Default" comment="Added move logic&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java" afterPath="$PROJECT_DIR$/src/com/example/RushHourApp/BoardActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleListActivity.java" afterPath="$PROJECT_DIR$/src/com/example/RushHourApp/PuzzleListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/about.xml" afterPath="$PROJECT_DIR$/res/layout/about.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/boardview.xml" afterPath="$PROJECT_DIR$/res/layout/boardview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/toast_layout.xml" afterPath="$PROJECT_DIR$/res/layout/toast_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\about_background.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\about_text.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\background_image_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\emo_im_cool.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\emo_im_sad.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\ic_launcher_big.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\main_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\mouse.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\mouse_horizontal.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\mousetrap.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\mousetrap_horizontal.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\mousetrap_horizontal_ready.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hafsteinn11\Dropbox\HR\Haust2013\ANDROID\RushHourApp\res\drawable-hdpi\mousetrap_vertical_ready.png" afterPath="" />
     </list>
     <ignored path="RushHour.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -385,6 +390,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RushHour" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RushHourApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -654,7 +677,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -676,7 +699,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22954546" sideWeight="0.8122867" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22954546" sideWeight="0.8122867" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18771331" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67064846" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
