@@ -57,7 +57,7 @@ public class PuzzleListActivity extends ListActivity {
                 if ( i==4 ) {
 	                System.out.println("PRINTING " + cursor.getInt(i));
                     ((ImageView) view).setImageResource(
-                            (cursor.getInt(i) == 0) ? R.drawable.no : R.drawable.yes );
+                            (cursor.getInt(i) == 0) ? R.drawable.emo_im_sad : R.drawable.emo_im_cool );
                     return true;
                 }
 
@@ -66,9 +66,6 @@ public class PuzzleListActivity extends ListActivity {
         });
 
         setListAdapter(mCursorAdapter);
-
-        if(mCursorAdapter.getCount() < 40)
-            addPuzzlesToDB(this);
     }
 
 
@@ -90,26 +87,5 @@ public class PuzzleListActivity extends ListActivity {
 	    startActivity(intent);
     }
 
-    private void addPuzzlesToDB(Context context)
-    {
-        String layout = "";
-
-        for(int i = 1; i <= 40;i++ )
-        {
-            try
-            {
-                layout = ReadXML.read(context.getAssets().open("challenge_classic40.xml"), i);
-            }
-            catch(IOException iox)
-            {
-                System.out.println("Error opening xml-file");
-            }
-
-
-            mPuzzlesAdapter.insertPuzzle(i,"PUZZLE" + " " + i,layout,false);
-
-        }
-
-    }
 
 }

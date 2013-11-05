@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:stretchColumns="*"
-            android:paddingTop="260dip"
+            android:paddingTop="200dip"
             >
         <TableRow
                 android:layout_width="match_parent"

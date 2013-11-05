@@ -91,7 +91,7 @@ public class DrawView extends View {
 			    rect.set( c * cellWidth, r * cellHeight,
 					    c * cellWidth + cellWidth, r * cellHeight + cellHeight );
 			    canvas.drawRect( rect, paint );
-			    rect.inset( (int)(rect.width() * 0.1), (int)(rect.height() * 0.1) );
+			    rect.inset( (int)(rect.width() * 0.4), (int)(rect.height() * 0.4) );
 			    shape.setBounds( rect );
 
 		    }

@@ -16,7 +16,7 @@ import java.io.IOException;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "PUZZLES_DB";
-    public static final int DB_VERSION = 13;
+    public static final int DB_VERSION = 14;
 
 
     public static final String TablePuzzles = "puzzles";
